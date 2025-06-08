@@ -23,5 +23,8 @@ public class ElementUtil {
     public boolean isElementDisplayed(By locator){
         return driver.findElement(locator).isDisplayed();
     }
+    public void enterText(By locator, String value){
+        driver.findElement(locator).sendKeys(value);
+    }
 
 }

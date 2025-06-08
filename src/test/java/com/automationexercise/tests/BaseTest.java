@@ -1,5 +1,6 @@
 package com.automationexercise.tests;
 
+import com.automationexercise.utils.ConfigReader;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
@@ -18,7 +19,7 @@ public class BaseTest {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
-        driver.get("https://automationexercise.com");
+        driver.get(ConfigReader.getProperty("baseURL"));
     }
     @AfterClass
     public void tearDown(){

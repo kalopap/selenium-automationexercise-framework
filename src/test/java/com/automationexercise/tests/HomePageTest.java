@@ -19,6 +19,7 @@ public class HomePageTest extends BaseTest {
         //click on Products menu
         homePage.clickOnProductsMenu();
         Assert.assertEquals(homePage.getHomePageTitle(), "Automation Exercise - All Products" );
+
     }
 
 

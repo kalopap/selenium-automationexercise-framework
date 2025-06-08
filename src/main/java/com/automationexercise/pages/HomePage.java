@@ -8,8 +8,7 @@ import org.openqa.selenium.WebDriver;
 public class HomePage extends BasePage {
     WebDriver driver;
     private By productsMenu = By.xpath("//a[@href='/products']");
-    private By loginMenu = By.xpath("//a[@href='/login']");
-    ElementUtil elementUtil;
+       ElementUtil elementUtil;
 
     public HomePage(WebDriver driver){
         super(driver);
@@ -19,9 +18,7 @@ public class HomePage extends BasePage {
     public void clickOnProductsMenu(){
         elementUtil.doClick(productsMenu);
     }
-    public void clickOnLoginMenu(){
-        elementUtil.doClick(loginMenu);
-    }
+
     public String getHomePageTitle(){
         return elementUtil.getPageTitle();
     }
