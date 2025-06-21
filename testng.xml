@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="AutomationExerciseSuite">
+<suite name="AutomationExerciseSuite" parallel="false">
     <test name="SanityTests">
+
+        <groups>
+            <run>
+                <include name="Sanity"/>
+                <include name="EndToEndTests"/>
+            </run>
+        </groups>
         <classes>
-            <class name="com.automationexercise.tests.HomePageTest"></class>
+            <class name="com.automationexercise.tests.RegisterPageTest"></class>
             <class name="com.automationexercise.tests.LoginPageTest"></class>
         </classes>
     </test>
 
-</suite>
+
+
+
+  </suite>
